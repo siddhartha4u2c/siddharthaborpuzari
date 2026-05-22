@@ -1,0 +1,30 @@
+node_modules
+dist
+dist-ssr
+.vite
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Local scripts
+copy-photo.mjs
+
+# Resume source files (optional — keep local only)
+resume_sb.pdf
+Resume_siddhartha_borpuzari.doc
