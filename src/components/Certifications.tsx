@@ -28,13 +28,13 @@ export default function Certifications() {
             transition={{ duration: 0.5, delay: idx * 0.06 }}
             className="glass glass-hover p-5 flex items-start gap-4"
           >
-            <span className={`grid place-items-center h-11 w-11 rounded-xl bg-gradient-to-br ${colors[idx % colors.length]} text-white shadow-glow flex-none`}>
+            <span className={`grid place-items-center h-11 w-11 rounded-xl bg-gradient-to-br ${colors[idx % colors.length]} text-white shadow-[0_10px_30px_-8px_rgba(139,92,246,0.55)] flex-none`}>
               <FaCertificate />
             </span>
             <div className="min-w-0">
-              <h3 className="font-semibold text-slate-100 leading-snug">{c.title}</h3>
-              <p className="text-sm text-slate-400 mt-1">
-                {c.issuer} <span className="text-slate-500">·</span> {c.year}
+              <h3 className="font-semibold text-slate-900 leading-snug">{c.title}</h3>
+              <p className="text-sm text-slate-600 mt-1">
+                {c.issuer} <span className="text-slate-400">·</span> {c.year}
               </p>
             </div>
           </motion.div>

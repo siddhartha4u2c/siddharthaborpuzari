@@ -29,16 +29,16 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 inset-x-0 z-50 transition-all ${
         scrolled
-          ? 'backdrop-blur-xl bg-[#0b0b1f]/70 border-b border-white/10'
+          ? 'backdrop-blur-xl bg-white/80 border-b border-slate-200/80 shadow-sm'
           : 'bg-transparent'
       }`}
     >
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <a href="#top" className="flex items-center gap-2 group">
-          <span className="grid place-items-center h-9 w-9 rounded-xl bg-gradient-to-br from-fuchsia-500 via-violet-500 to-cyan-500 text-white font-display font-bold shadow-glow">
+          <span className="grid place-items-center h-9 w-9 rounded-xl bg-gradient-to-br from-fuchsia-500 via-violet-500 to-cyan-500 text-white font-display font-bold shadow-[0_8px_20px_-6px_rgba(139,92,246,0.6)]">
             SB
           </span>
-          <span className="hidden sm:block font-display font-semibold text-slate-100">
+          <span className="hidden sm:block font-display font-semibold text-slate-900">
             Siddhartha<span className="gradient-text">.</span>
           </span>
         </a>
@@ -48,7 +48,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="px-3 py-2 rounded-full text-sm text-slate-300 hover:text-white hover:bg-white/5 transition"
+                className="px-3 py-2 rounded-full text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-900/5 transition"
               >
                 {l.label}
               </a>
@@ -63,9 +63,9 @@ export default function Navbar() {
           <a
             href="#top"
             aria-label="Siddhartha Borpuzari"
-            className="relative grid place-items-center h-10 w-10 rounded-full bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-cyan-500 p-[2px] shadow-glow hover:scale-105 transition"
+            className="relative grid place-items-center h-10 w-10 rounded-full bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-cyan-500 p-[2px] shadow-[0_8px_20px_-6px_rgba(139,92,246,0.6)] hover:scale-105 transition"
           >
-            <span className="block h-full w-full rounded-full overflow-hidden bg-[#0b0b1f]">
+            <span className="block h-full w-full rounded-full overflow-hidden bg-white">
               <img
                 src="/siddhartha.jpg"
                 alt="Siddhartha"
@@ -86,22 +86,22 @@ export default function Navbar() {
 
         <button
           aria-label="Toggle menu"
-          className="md:hidden grid place-items-center h-10 w-10 rounded-xl border border-white/10 bg-white/5"
+          className="md:hidden grid place-items-center h-10 w-10 rounded-xl border border-slate-300 bg-white shadow-sm"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="block w-5 h-px bg-white relative before:content-[''] before:absolute before:-top-1.5 before:left-0 before:w-5 before:h-px before:bg-white after:content-[''] after:absolute after:top-1.5 after:left-0 after:w-5 after:h-px after:bg-white" />
+          <span className="block w-5 h-px bg-slate-900 relative before:content-[''] before:absolute before:-top-1.5 before:left-0 before:w-5 before:h-px before:bg-slate-900 after:content-[''] after:absolute after:top-1.5 after:left-0 after:w-5 after:h-px after:bg-slate-900" />
         </button>
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-white/10 bg-[#0b0b1f]/95 backdrop-blur-xl">
+        <div className="md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-xl">
           <ul className="px-4 py-3 space-y-1">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   onClick={() => setOpen(false)}
                   href={l.href}
-                  className="block px-3 py-2 rounded-lg text-slate-200 hover:bg-white/5"
+                  className="block px-3 py-2 rounded-lg text-slate-800 hover:bg-slate-100"
                 >
                   {l.label}
                 </a>

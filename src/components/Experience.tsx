@@ -26,7 +26,7 @@ export default function Experience() {
               className="relative pl-14 sm:pl-20"
             >
               <span
-                className={`absolute left-0 sm:left-1.5 top-1 h-9 w-9 rounded-full bg-gradient-to-br ${exp.color} grid place-items-center shadow-glow ring-4 ring-[#0b0b1f]`}
+                className={`absolute left-0 sm:left-1.5 top-1 h-9 w-9 rounded-full bg-gradient-to-br ${exp.color} grid place-items-center shadow-[0_10px_30px_-8px_rgba(139,92,246,0.55)] ring-4 ring-white`}
                 aria-hidden
               >
                 <FaBriefcase className="text-white text-sm" />
@@ -35,8 +35,8 @@ export default function Experience() {
               <div className="glass glass-hover p-5 sm:p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
-                    <h3 className="font-display font-semibold text-lg sm:text-xl">{exp.role}</h3>
-                    <p className="text-slate-300">
+                    <h3 className="font-display font-semibold text-lg sm:text-xl text-slate-900">{exp.role}</h3>
+                    <p>
                       <span className={`bg-gradient-to-r ${exp.color} bg-clip-text text-transparent font-semibold`}>
                         {exp.company}
                       </span>
@@ -47,7 +47,7 @@ export default function Experience() {
 
                 <ul className="mt-4 space-y-2">
                   {exp.bullets.map((b, i) => (
-                    <li key={i} className="flex gap-3 text-sm text-slate-300/95">
+                    <li key={i} className="flex gap-3 text-sm text-slate-700">
                       <span className={`mt-1.5 h-1.5 w-1.5 rounded-full bg-gradient-to-r ${exp.color} flex-none`} />
                       <span>{b}</span>
                     </li>

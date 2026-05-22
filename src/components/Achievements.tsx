@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Section from './Section'
 import { profile } from '../data'
-import { FaLinkedin, FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaExternalLinkAlt, FaYoutube } from 'react-icons/fa'
 import { SiLeetcode, SiHackerrank } from 'react-icons/si'
 
 const platforms = [
@@ -18,6 +18,13 @@ const platforms = [
     href: profile.socials.github,
     icon: <FaGithub />,
     gradient: 'from-slate-500 to-slate-700',
+  },
+  {
+    name: 'YouTube',
+    desc: 'Walk-throughs, demos & technical content',
+    href: profile.socials.youtube,
+    icon: <FaYoutube />,
+    gradient: 'from-red-500 to-rose-600',
   },
   {
     name: 'LeetCode',
@@ -43,7 +50,7 @@ export default function Achievements() {
       title="Where I build & compete"
       subtitle="Connect with me or explore my coding profiles."
     >
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {platforms.map((p, idx) => (
           <motion.a
             key={p.name}
@@ -57,15 +64,15 @@ export default function Achievements() {
             className="glass glass-hover p-6 relative overflow-hidden group"
           >
             <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${p.gradient}`} />
-            <div className={`absolute -bottom-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br ${p.gradient} opacity-20 group-hover:opacity-40 blur-2xl transition`} />
-            <div className="flex items-center justify-between">
-              <span className={`grid place-items-center h-11 w-11 rounded-xl bg-gradient-to-br ${p.gradient} text-white text-xl shadow-glow`}>
+            <div className={`absolute -bottom-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br ${p.gradient} opacity-25 group-hover:opacity-45 blur-2xl transition`} />
+            <div className="flex items-center justify-between relative">
+              <span className={`grid place-items-center h-11 w-11 rounded-xl bg-gradient-to-br ${p.gradient} text-white text-xl shadow-[0_10px_30px_-8px_rgba(139,92,246,0.55)]`}>
                 {p.icon}
               </span>
-              <FaExternalLinkAlt className="text-slate-400 group-hover:text-white transition" />
+              <FaExternalLinkAlt className="text-slate-400 group-hover:text-slate-900 transition" />
             </div>
-            <h3 className="mt-4 font-display font-semibold text-lg">{p.name}</h3>
-            <p className="text-sm text-slate-300/90 mt-1">{p.desc}</p>
+            <h3 className="mt-4 font-display font-semibold text-lg text-slate-900 relative">{p.name}</h3>
+            <p className="text-sm text-slate-700 mt-1 relative">{p.desc}</p>
           </motion.a>
         ))}
       </div>

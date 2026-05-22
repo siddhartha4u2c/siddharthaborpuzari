@@ -42,6 +42,7 @@ export const profile = {
     github: 'https://github.com/siddhartha4u2c',
     leetcode: 'https://leetcode.com/siddhartha_borpuzari/',
     hackerrank: 'https://www.hackerrank.com/siddhartha_borp1',
+    youtube: 'https://www.youtube.com/@siddharthaborpuzari9000/videos',
   },
 }
 

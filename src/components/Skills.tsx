@@ -21,19 +21,19 @@ export default function Skills() {
             className="glass glass-hover p-6 relative overflow-hidden group"
           >
             <div
-              className={`absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br ${g.gradient} opacity-20 group-hover:opacity-40 blur-2xl transition`}
+              className={`absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br ${g.gradient} opacity-25 group-hover:opacity-50 blur-2xl transition`}
             />
-            <div className="flex items-center gap-3">
-              <span className={`grid place-items-center h-10 w-10 rounded-xl bg-gradient-to-br ${g.gradient} text-xl shadow-glow`}>
+            <div className="flex items-center gap-3 relative">
+              <span className={`grid place-items-center h-10 w-10 rounded-xl bg-gradient-to-br ${g.gradient} text-xl shadow-[0_10px_30px_-8px_rgba(139,92,246,0.55)]`}>
                 {g.icon}
               </span>
-              <h3 className="font-display font-semibold text-lg">{g.category}</h3>
+              <h3 className="font-display font-semibold text-lg text-slate-900">{g.category}</h3>
             </div>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2 relative">
               {g.items.map((item) => (
                 <span
                   key={item}
-                  className={`chip border-white/10 bg-white/[0.06] hover:bg-white/10 hover:border-white/20 transition`}
+                  className="chip hover:bg-white hover:border-slate-300 transition"
                 >
                   {item}
                 </span>

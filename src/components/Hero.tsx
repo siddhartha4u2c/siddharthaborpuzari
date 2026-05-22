@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaEnvelope, FaYoutube } from 'react-icons/fa'
 import { SiLeetcode, SiHackerrank } from 'react-icons/si'
 import { profile, stats } from '../data'
 
 export default function Hero() {
   return (
     <section id="top" className="relative pt-28 sm:pt-36 pb-12">
-      <div className="absolute inset-0 -z-10 bg-grid opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
+      <div className="absolute inset-0 -z-10 bg-grid-light opacity-50 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
 
       <div className="grid lg:grid-cols-[1.4fr,1fr] gap-10 items-center">
         <motion.div
@@ -14,23 +14,23 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <span className="chip border-emerald-400/30 bg-emerald-400/10 text-emerald-200">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="chip border-emerald-200 bg-emerald-50 text-emerald-700">
+            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             Open to interesting opportunities
           </span>
 
-          <h1 className="mt-5 font-display text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05]">
+          <h1 className="mt-5 font-display text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05] text-slate-900">
             Hi, I’m{' '}
             <span className="gradient-text">{profile.name.split(' ')[0]}</span>{' '}
-            <span className="block text-slate-100">{profile.name.split(' ')[1]}</span>
+            <span className="block">{profile.name.split(' ')[1]}</span>
           </h1>
 
-          <p className="mt-4 text-lg sm:text-xl text-slate-300">{profile.title}</p>
+          <p className="mt-4 text-lg sm:text-xl text-slate-700">{profile.title}</p>
 
-          <p className="mt-6 max-w-2xl text-slate-300/90 leading-relaxed">
-            I design and build <span className="text-fuchsia-300 font-medium">cloud-native data platforms</span> on Microsoft Azure,
-            create <span className="text-cyan-300 font-medium">GenAI-powered applications</span>, and bring a unique{' '}
-            <span className="text-violet-300 font-medium">engineering + business</span> perspective to every problem I solve.
+          <p className="mt-6 max-w-2xl text-slate-600 leading-relaxed">
+            I design and build <span className="text-fuchsia-600 font-semibold">cloud-native data platforms</span> on Microsoft Azure,
+            create <span className="text-cyan-600 font-semibold">GenAI-powered applications</span>, and bring a unique{' '}
+            <span className="text-violet-600 font-semibold">engineering + business</span> perspective to every problem I solve.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -40,11 +40,12 @@ export default function Hero() {
             <a href="#projects" className="btn-ghost">View Projects</a>
           </div>
 
-          <div className="mt-8 flex items-center gap-3 text-slate-300">
-            <SocialLink href={profile.socials.linkedin} icon={<FaLinkedin />} label="LinkedIn" hue="text-sky-400" />
-            <SocialLink href={profile.socials.github} icon={<FaGithub />} label="GitHub" hue="text-slate-100" />
-            <SocialLink href={profile.socials.leetcode} icon={<SiLeetcode />} label="LeetCode" hue="text-amber-400" />
-            <SocialLink href={profile.socials.hackerrank} icon={<SiHackerrank />} label="HackerRank" hue="text-emerald-400" />
+          <div className="mt-8 flex items-center gap-3">
+            <SocialLink href={profile.socials.linkedin} icon={<FaLinkedin />} label="LinkedIn" hue="text-sky-600" />
+            <SocialLink href={profile.socials.github} icon={<FaGithub />} label="GitHub" hue="text-slate-900" />
+            <SocialLink href={profile.socials.youtube} icon={<FaYoutube />} label="YouTube" hue="text-red-600" />
+            <SocialLink href={profile.socials.leetcode} icon={<SiLeetcode />} label="LeetCode" hue="text-amber-600" />
+            <SocialLink href={profile.socials.hackerrank} icon={<SiHackerrank />} label="HackerRank" hue="text-emerald-600" />
           </div>
         </motion.div>
 
@@ -55,9 +56,9 @@ export default function Hero() {
           className="relative mx-auto lg:ml-auto"
         >
           <div className="relative h-72 w-72 sm:h-80 sm:w-80">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-cyan-500 animate-pulse-slow blur-2xl opacity-60" />
-            <div className="relative h-full w-full rounded-full bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-cyan-500 p-[4px] shadow-glow animate-float">
-              <div className="relative h-full w-full rounded-full overflow-hidden bg-[#0b0b1f] ring-2 ring-white/10">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-cyan-500 animate-pulse-slow blur-2xl opacity-50" />
+            <div className="relative h-full w-full rounded-full bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-cyan-500 p-[4px] shadow-[0_30px_60px_-20px_rgba(139,92,246,0.6)] animate-float">
+              <div className="relative h-full w-full rounded-full overflow-hidden bg-white ring-4 ring-white">
                 <img
                   src="/siddhartha.jpg"
                   alt="Siddhartha Borpuzari"
@@ -75,11 +76,10 @@ export default function Hero() {
                   }}
                 />
                 <div
-                  className="absolute inset-0 hidden place-items-center bg-[#0b0b1f]"
+                  className="absolute inset-0 hidden place-items-center bg-white"
                 >
                   <span className="font-display text-7xl font-bold gradient-text select-none">SB</span>
                 </div>
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0b1f]/60 to-transparent pointer-events-none" />
               </div>
             </div>
             {/* Floating chips */}
@@ -100,9 +100,9 @@ export default function Hero() {
         className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4"
       >
         {stats.map((s) => (
-          <div key={s.label} className="glass p-5 text-center glass-hover">
+          <div key={s.label} className="glass glass-hover p-5 text-center">
             <div className="font-display text-3xl font-bold gradient-text">{s.value}</div>
-            <div className="mt-1 text-xs sm:text-sm text-slate-300">{s.label}</div>
+            <div className="mt-1 text-xs sm:text-sm text-slate-600">{s.label}</div>
           </div>
         ))}
       </motion.div>
@@ -119,10 +119,10 @@ function SocialLink({
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className={`group relative grid place-items-center h-11 w-11 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition ${hue}`}
+      className={`group relative grid place-items-center h-11 w-11 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 transition shadow-sm ${hue}`}
     >
       <span className="text-lg">{icon}</span>
-      <span className="pointer-events-none absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs text-slate-200 bg-white/10 backdrop-blur px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition">
+      <span className="pointer-events-none absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs text-white bg-slate-900 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition">
         {label}
       </span>
     </a>
@@ -132,7 +132,7 @@ function SocialLink({
 function FloatingChip({ className, label }: { className: string; label: string }) {
   return (
     <div
-      className={`absolute ${className} px-3 py-1.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r shadow-glow animate-float`}
+      className={`absolute ${className} px-3 py-1.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r shadow-[0_10px_30px_-8px_rgba(139,92,246,0.6)] animate-float`}
       style={{ animationDelay: `${Math.random() * 2}s` }}
     >
       {label}

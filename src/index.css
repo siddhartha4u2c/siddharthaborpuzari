@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html, body, #root {
@@ -11,55 +11,69 @@ html, body, #root {
 }
 
 body {
-  @apply bg-[#0b0b1f] text-slate-100 font-sans antialiased;
+  @apply text-slate-900 font-sans antialiased;
+  background-color: #fbfaff;
   background-image:
-    radial-gradient(1200px 600px at -10% -10%, rgba(139, 92, 246, 0.25), transparent 60%),
-    radial-gradient(900px 500px at 110% 0%, rgba(236, 72, 153, 0.2), transparent 60%),
-    radial-gradient(900px 600px at 50% 110%, rgba(6, 182, 212, 0.22), transparent 60%);
+    radial-gradient(1200px 600px at -10% -10%, rgba(236, 72, 153, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 110% 0%, rgba(139, 92, 246, 0.18), transparent 60%),
+    radial-gradient(900px 600px at 50% 110%, rgba(6, 182, 212, 0.18), transparent 60%);
   background-attachment: fixed;
 }
 
 * { -webkit-tap-highlight-color: transparent; }
 
-/* Pretty scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: #0b0b1f; }
+::-webkit-scrollbar-track { background: #f3f1ff; }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #8b5cf6, #ec4899);
   border-radius: 8px;
 }
 
+::selection {
+  background: rgba(139, 92, 246, 0.25);
+  color: #0f172a;
+}
+
 @layer components {
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+    @apply bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-2xl shadow-[0_8px_30px_-12px_rgba(15,23,42,0.12)];
   }
   .glass-hover {
-    @apply transition-all duration-300 hover:bg-white/[0.08] hover:border-white/20 hover:-translate-y-1;
+    @apply transition-all duration-300 hover:bg-white hover:border-slate-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_-12px_rgba(99,102,241,0.25)];
+  }
+  .glass-dark {
+    @apply bg-slate-900/95 text-slate-100 border border-slate-800 rounded-2xl shadow-[0_18px_50px_-12px_rgba(15,23,42,0.4)];
   }
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 via-violet-600 to-cyan-600;
   }
   .section-title {
-    @apply font-display text-3xl sm:text-4xl font-bold tracking-tight;
+    @apply font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900;
   }
   .chip {
-    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-white/10 bg-white/5 text-slate-200;
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 bg-white/80 text-slate-700;
+  }
+  .chip-dark {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-white/15 bg-white/10 text-slate-100;
   }
   .btn-primary {
     @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-white
            bg-gradient-to-r from-fuchsia-500 via-violet-500 to-indigo-500
-           shadow-glow hover:shadow-glow-pink transition-all duration-300 hover:-translate-y-0.5;
+           shadow-[0_10px_30px_-8px_rgba(139,92,246,0.55)] hover:shadow-[0_14px_40px_-8px_rgba(236,72,153,0.55)] transition-all duration-300 hover:-translate-y-0.5;
   }
   .btn-ghost {
-    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-slate-100
-           border border-white/15 bg-white/5 hover:bg-white/10 transition-all duration-300;
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-slate-900
+           border border-slate-300 bg-white hover:bg-slate-50 transition-all duration-300 shadow-sm;
+  }
+  .btn-dark {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-white
+           bg-slate-900 hover:bg-slate-800 transition-all duration-300 shadow-md;
   }
 }
 
-/* Subtle grid pattern overlay */
-.bg-grid {
+.bg-grid-light {
   background-image:
-    linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15,23,42,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15,23,42,0.06) 1px, transparent 1px);
   background-size: 40px 40px;
 }

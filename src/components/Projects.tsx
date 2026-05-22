@@ -30,7 +30,7 @@ export default function Projects() {
               <button
                 type="button"
                 onClick={() => setLightbox({ src: p.image!, title: p.title })}
-                className="relative block w-full aspect-[16/10] overflow-hidden bg-black/40"
+                className="relative block w-full aspect-[16/10] overflow-hidden bg-slate-100"
                 aria-label={`View ${p.title} screenshot`}
               >
                 <img
@@ -43,13 +43,12 @@ export default function Projects() {
                     t.style.display = 'none'
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b1f] via-[#0b0b1f]/30 to-transparent" />
-                <span className="absolute top-3 right-3 chip border-white/20 bg-black/40 backdrop-blur">
+                <span className="absolute top-3 right-3 chip border-slate-300 bg-white/90 backdrop-blur text-slate-700">
                   <FaExpand className="text-xs" /> Click to enlarge
                 </span>
                 {p.liveUrl && (
-                  <span className="absolute bottom-3 left-3 chip border-emerald-400/30 bg-emerald-400/10 text-emerald-200">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="absolute bottom-3 left-3 chip border-emerald-300 bg-emerald-50/95 text-emerald-700">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     Live demo
                   </span>
                 )}
@@ -57,19 +56,19 @@ export default function Projects() {
             )}
 
             <div className="p-6 relative flex-1 flex flex-col">
-              <div className={`absolute -bottom-20 -right-20 h-48 w-48 rounded-full bg-gradient-to-br ${p.color} opacity-15 group-hover:opacity-30 blur-2xl transition pointer-events-none`} />
+              <div className={`absolute -bottom-20 -right-20 h-48 w-48 rounded-full bg-gradient-to-br ${p.color} opacity-20 group-hover:opacity-35 blur-2xl transition pointer-events-none`} />
 
-              <div className="flex items-start gap-3">
-                <span className={`grid place-items-center h-10 w-10 rounded-xl bg-gradient-to-br ${p.color} text-white shadow-glow flex-none`}>
+              <div className="flex items-start gap-3 relative">
+                <span className={`grid place-items-center h-10 w-10 rounded-xl bg-gradient-to-br ${p.color} text-white shadow-[0_10px_30px_-8px_rgba(139,92,246,0.55)] flex-none`}>
                   <FaRocket />
                 </span>
                 <div className="min-w-0">
-                  <h3 className="font-display font-semibold text-lg leading-tight">{p.title}</h3>
-                  {p.period && <p className="text-xs text-slate-400 mt-0.5">{p.period}</p>}
+                  <h3 className="font-display font-semibold text-lg leading-tight text-slate-900">{p.title}</h3>
+                  {p.period && <p className="text-xs text-slate-500 mt-0.5">{p.period}</p>}
                 </div>
               </div>
 
-              <p className="mt-3 text-sm text-slate-300/95 leading-relaxed">{p.description}</p>
+              <p className="mt-3 text-sm text-slate-700 leading-relaxed relative">{p.description}</p>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {p.tags.map((t) => (
@@ -78,12 +77,12 @@ export default function Projects() {
               </div>
 
               {p.liveUrl && (
-                <div className="mt-5">
+                <div className="mt-5 relative">
                   <a
                     href={p.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r ${p.color} shadow-glow hover:-translate-y-0.5 transition`}
+                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r ${p.color} shadow-[0_10px_30px_-8px_rgba(139,92,246,0.55)] hover:-translate-y-0.5 transition`}
                   >
                     Visit live app <FaExternalLinkAlt className="text-xs" />
                   </a>
@@ -115,18 +114,18 @@ export default function Projects() {
                 type="button"
                 onClick={() => setLightbox(null)}
                 aria-label="Close"
-                className="absolute -top-12 right-0 grid place-items-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/15 transition"
+                className="absolute -top-12 right-0 grid place-items-center h-10 w-10 rounded-full bg-white/90 hover:bg-white text-slate-900 border border-white shadow-md transition"
               >
                 <FaTimes />
               </button>
-              <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0b0b1f]">
+              <div className="rounded-2xl overflow-hidden border border-white/30 shadow-2xl bg-white">
                 <img
                   src={lightbox.src}
                   alt={lightbox.title}
                   className="block w-full h-auto"
                 />
               </div>
-              <p className="mt-3 text-center text-sm text-slate-300">{lightbox.title}</p>
+              <p className="mt-3 text-center text-sm text-white/90">{lightbox.title}</p>
             </motion.div>
           </motion.div>
         )}

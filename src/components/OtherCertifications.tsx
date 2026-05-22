@@ -42,7 +42,7 @@ export default function OtherCertifications() {
               <button
                 type="button"
                 onClick={() => setPreview({ src: c.file, title: c.title, type: c.type })}
-                className="relative block w-full aspect-[4/3] overflow-hidden bg-black/30"
+                className="relative block w-full aspect-[4/3] overflow-hidden bg-slate-100"
                 aria-label={`View ${c.title}`}
               >
                 {c.type === 'image' ? (
@@ -57,17 +57,16 @@ export default function OtherCertifications() {
                     <FaFilePdf className="text-white text-6xl drop-shadow-lg" />
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b1f] via-[#0b0b1f]/20 to-transparent" />
-                <span className="absolute top-3 right-3 chip border-white/20 bg-black/40 backdrop-blur">
+                <span className="absolute top-3 right-3 chip border-slate-300 bg-white/90 backdrop-blur text-slate-700">
                   <FaExpand className="text-xs" /> View
                 </span>
               </button>
 
               <div className="p-4 flex items-start gap-3">
-                <span className={`grid place-items-center h-9 w-9 rounded-xl bg-gradient-to-br ${gradient} text-white shadow-glow flex-none`}>
+                <span className={`grid place-items-center h-9 w-9 rounded-xl bg-gradient-to-br ${gradient} text-white shadow-[0_10px_30px_-8px_rgba(139,92,246,0.55)] flex-none`}>
                   <FaAward />
                 </span>
-                <h3 className="font-semibold text-slate-100 leading-snug">{c.title}</h3>
+                <h3 className="font-semibold text-slate-900 leading-snug">{c.title}</h3>
               </div>
             </motion.div>
           )
@@ -95,12 +94,12 @@ export default function OtherCertifications() {
                 type="button"
                 onClick={() => setPreview(null)}
                 aria-label="Close"
-                className="absolute -top-12 right-0 grid place-items-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/15 transition"
+                className="absolute -top-12 right-0 grid place-items-center h-10 w-10 rounded-full bg-white/90 hover:bg-white text-slate-900 border border-white shadow-md transition"
               >
                 <FaTimes />
               </button>
 
-              <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0b0b1f]">
+              <div className="rounded-2xl overflow-hidden border border-white/30 shadow-2xl bg-white">
                 {preview.type === 'image' ? (
                   <img src={preview.src} alt={preview.title} className="block w-full h-auto" />
                 ) : (
@@ -112,7 +111,7 @@ export default function OtherCertifications() {
                 )}
               </div>
 
-              <div className="mt-3 flex items-center justify-between gap-3 text-sm text-slate-300">
+              <div className="mt-3 flex items-center justify-between gap-3 text-sm text-white/90">
                 <span>{preview.title}</span>
                 <a
                   href={preview.src}

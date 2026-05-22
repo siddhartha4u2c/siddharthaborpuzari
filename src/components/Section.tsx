@@ -19,7 +19,7 @@ export default function Section({ id, eyebrow, title, subtitle, children }: Prop
         className="mb-10 sm:mb-14"
       >
         {eyebrow && (
-          <span className="chip mb-4 border-fuchsia-400/30 bg-fuchsia-400/10 text-fuchsia-200">
+          <span className="chip mb-4 border-fuchsia-200 bg-fuchsia-50 text-fuchsia-700">
             {eyebrow}
           </span>
         )}
@@ -27,7 +27,7 @@ export default function Section({ id, eyebrow, title, subtitle, children }: Prop
           <span className="gradient-text">{title}</span>
         </h2>
         {subtitle && (
-          <p className="mt-3 max-w-2xl text-slate-300/90">{subtitle}</p>
+          <p className="mt-3 max-w-2xl text-slate-600">{subtitle}</p>
         )}
       </motion.div>
       {children}
