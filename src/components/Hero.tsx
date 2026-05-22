@@ -59,11 +59,16 @@ export default function Hero() {
             <div className="relative h-full w-full rounded-full bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-cyan-500 p-[4px] shadow-glow animate-float">
               <div className="relative h-full w-full rounded-full overflow-hidden bg-[#0b0b1f] ring-2 ring-white/10">
                 <img
-                  src="/siddhartha.png"
+                  src="/siddhartha.jpg"
                   alt="Siddhartha Borpuzari"
                   className="h-full w-full object-cover"
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement
+                    if (!target.dataset.fallbackTried) {
+                      target.dataset.fallbackTried = '1'
+                      target.src = '/siddhartha.png'
+                      return
+                    }
                     target.style.display = 'none'
                     const fallback = target.nextElementSibling as HTMLElement | null
                     if (fallback) fallback.style.display = 'grid'

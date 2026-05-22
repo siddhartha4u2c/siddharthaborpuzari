@@ -66,11 +66,16 @@ export default function Navbar() {
           >
             <span className="block h-full w-full rounded-full overflow-hidden bg-[#0b0b1f]">
               <img
-                src="/siddhartha.png"
+                src="/siddhartha.jpg"
                 alt="Siddhartha"
                 className="h-full w-full object-cover"
                 onError={(e) => {
                   const t = e.currentTarget as HTMLImageElement
+                  if (!t.dataset.fallbackTried) {
+                    t.dataset.fallbackTried = '1'
+                    t.src = '/siddhartha.png'
+                    return
+                  }
                   t.style.display = 'none'
                 }}
               />
