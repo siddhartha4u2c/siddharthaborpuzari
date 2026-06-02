@@ -148,6 +148,7 @@ export const projects: Project[] = [
       'An AI-based fitness assistant app powered by LLMs — generates personalised workout & nutrition guidance.',
     tags: ['LLM', 'Python', 'Streamlit'],
     color: 'from-emerald-500 to-cyan-500',
+    liveUrl: 'https://siddfitnessassistant-kamh.streamlit.app',
   },
   {
     title: 'MedAssist AI',
