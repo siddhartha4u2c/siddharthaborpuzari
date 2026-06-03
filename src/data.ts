@@ -173,6 +173,7 @@ export const projects: Project[] = [
       'The use of bagging,boosting and other ensemble techniques used in machine learning.',
     tags: ['Data Science', 'ML'],
     color: 'from-amber-500 to-rose-500',
+    image: '/projects/ensembletechniques.png',
     liveUrl: 'https://ensemble-techniques.streamlit.app',
   },
   {
