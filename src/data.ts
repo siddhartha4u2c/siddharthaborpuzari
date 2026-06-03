@@ -168,6 +168,14 @@ export const projects: Project[] = [
     color: 'from-amber-500 to-rose-500',
   },
   {
+    title: 'Ensemble technique demonstration',
+    description:
+      'The use of bagging,boosting and other ensemble techniques used in machine learning.',
+    tags: ['Data Science', 'ML'],
+    color: 'from-amber-500 to-rose-500',
+    liveUrl: 'https://ensemble-techniques.streamlit.app',
+  },
+  {
     title: 'Azure ETL Optimisation (Enterprise)',
     period: '2022 – Present',
     description:
