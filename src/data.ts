@@ -168,6 +168,14 @@ export const projects: Project[] = [
     color: 'from-amber-500 to-rose-500',
   },
   {
+    title: 'Fetal Health classification based on decision tree algorithm',
+    description:
+      'Web app created using decision tree algorithm to classify fetal health from kaggle dataset',
+    tags: ['Classification', 'Decision Tree', 'ML'],
+    color: 'from-amber-500 to-rose-500',
+    liveUrl: 'https://fetalhealthclassification.onrender.com',
+  },
+  {
     title: 'Ensemble technique demonstration',
     description:
       'The use of bagging,boosting and other ensemble techniques used in machine learning.',
