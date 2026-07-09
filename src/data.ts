@@ -173,6 +173,7 @@ export const projects: Project[] = [
       'Langgraph based application that uses nodes to generate an output',
     tags: ['Langgraph', 'LLM'],
     color: 'from-amber-500 to-rose-500',
+    image: '/projects/langgraph.png',
     liveUrl: 'https://play-langgraph.onrender.com',
   },
   {
