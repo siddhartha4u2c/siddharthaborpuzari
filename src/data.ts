@@ -168,6 +168,14 @@ export const projects: Project[] = [
     color: 'from-amber-500 to-rose-500',
   },
   {
+    title: 'Langgraph-based Node mechanism explainer',
+    description:
+      'Langgraph based application that uses nodes to generate an output',
+    tags: ['Langgraph', 'LLM'],
+    color: 'from-amber-500 to-rose-500',
+    liveUrl: 'https://play-langgraph.onrender.com',
+  },
+  {
     title: 'Fetal Health classification based on decision tree algorithm',
     description:
       'Web app created using decision tree algorithm to classify fetal health from kaggle dataset',
