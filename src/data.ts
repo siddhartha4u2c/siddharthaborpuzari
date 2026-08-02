@@ -152,14 +152,6 @@ export const projects: Project[] = [
     liveUrl: 'https://siddfitnessassistant-kamh.streamlit.app',
   },
   {
-    title: 'YOLO Object detection app',
-    description:
-      'An AI-based object detection app powered by YOLO.',
-    tags: ['LLM', 'Python'],
-    color: 'from-emerald-500 to-cyan-500',
-    liveUrl: 'https://yolo-z2sj.onrender.com',
-  },
-  {
     title: 'MedAssist AI',
     description:
       'A unified, professional telemedicine workspace for patients and clinicians — structured symptom journeys, report interpretation, vitals & medication tracking, appointments, care plans, billing, and an AI assistant chat for patient education.',
