@@ -161,6 +161,15 @@ export const projects: Project[] = [
     liveUrl: 'https://medassist-1-m096.onrender.com',
   },
   {
+    title: 'HITL Code generator',
+    description:
+      'A langgraph based application generating code and taking human feedback for approval ',
+    tags: ['GenAI', 'LangGraph'],
+    color: 'from-rose-500 to-pink-500',
+    image: '/projects/medassist.png',
+    liveUrl: 'https://hitlcodegeneratoragent-production.up.railway.app',
+  },
+  {
     title: 'RAG-based Patient Information Assistant',
     description:
       'Retrieval-Augmented-Generation application that lets patients query their own medical details with grounded, source-cited answers.',
