@@ -166,7 +166,7 @@ export const projects: Project[] = [
       'A langgraph based application generating code and taking human feedback for approval ',
     tags: ['GenAI', 'LangGraph'],
     color: 'from-rose-500 to-pink-500',
-    image: '/projects/medassist.png',
+    image: '/projects/hitl.png',
     liveUrl: 'https://hitlcodegeneratoragent-production.up.railway.app',
   },
   {
