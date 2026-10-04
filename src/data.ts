@@ -166,7 +166,7 @@ export const projects: Project[] = [
       'A langgraph based application generating blog and taking human feedback for approval ',
     tags: ['GenAI', 'LangGraph'],
     color: 'from-rose-500 to-pink-500',
-    image: '/projects/hitl.png',
+    image: '/projects/blogwriting.png',
     liveUrl: 'https://blogwritingagent-dfzinjpwgwqyr2cooshqzc.streamlit.app/',
   },
   {
